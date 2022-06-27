@@ -1,0 +1,269 @@
+<html lang="en"><head>
+
+  <meta charset="UTF-8">
+
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - &lt;css /&gt;</title>
+
+
+
+
+<style>
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  perspective: 2000px;
+  overflow: hidden;
+}
+body *:not(:empty) {
+  transform-style: preserve-3d;
+}
+
+.code {
+  position: relative;
+  font-size: 50px;
+  -webkit-animation: rotate 20s infinite ease-in-out;
+          animation: rotate 20s infinite ease-in-out;
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: skewX(0deg) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: skewX(0deg) rotateX(0deg) rotateY(360deg);
+  }
+  100% {
+    transform: skewX(0deg) rotateX(0deg) rotateY(720deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: skewX(0deg) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: skewX(0deg) rotateX(0deg) rotateY(360deg);
+  }
+  100% {
+    transform: skewX(0deg) rotateX(0deg) rotateY(720deg);
+  }
+}
+
+.code * {
+  position: absolute;
+}
+
+.slash {
+  width: 2em;
+  height: 8em;
+  transform: translate(-50%, -50%) skewX(-15deg);
+}
+
+.front, .back, .left, .right, .top, .bottom {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0.5em #000 inset;
+  background-color: hsl(200, 30%, var(--light));
+}
+
+.front {
+  --light: 80%;
+  transform: translateZ(0.5em);
+}
+
+.back {
+  --light: 85%;
+  transform: rotateY(180deg) translateZ(0.5em);
+}
+
+.right {
+  --light: 70%;
+  transform: rotateY(90deg) translateZ(0.5em);
+}
+
+.left {
+  --light: 75%;
+  transform: rotateY(-90deg) translateZ(0.5em);
+}
+
+.top {
+  width: 1em;
+  height: 1em;
+  --light: 90%;
+  transform: translateY(-0.5em) rotateX(90deg);
+}
+
+.bottom {
+  bottom: 0;
+  width: 1em;
+  height: 1em;
+  --light: 65%;
+  transform: translateY(0.5em) rotateX(90deg);
+}
+</style>
+<style media="screen">
+.slash1 {
+  left: 4em;
+  width: 1em;
+  height: 5em;
+  transform: translate(-50%, -50%) skewX(0deg);
+}
+.slash2 {
+  left: 2.5em;
+  width: 1em;
+  height: 5em;
+  transform: translate(-50%, -50%) skewX(0deg);
+}
+.slash3 {
+  top: 2em;
+  left: -1.5em;
+  width: 1em;
+  height: 1em;
+  transform: translate(-50%, -50%) skewX(0deg);
+}
+.slash4 {
+  top: -0.25em;
+  left: 0.5em;
+  width: 1em;
+  height: 3.5em;
+  transform: translate(-50%, -50%) skewX(0deg);
+}
+.slash5 {
+  top: 0em;
+  left: -1.5em;
+  width: 1em;
+  height: 3em;
+  transform: translate(-50%, -50%) skewX(0deg);
+}
+.slash6 {
+  top: -1em;
+  left: -3.5em;
+  width: 1em;
+  height: 1em;
+  transform: translate(-50%, -50%) skewX(0deg);
+}
+.slash7 {
+  top: 0.5em;
+  left: -3.5em;
+  width: 1em;
+  height: 2em;
+  transform: translate(-50%, -50%) skewX(0deg);
+}
+.slash8 {
+  top: 1em;
+  left: -2.5em;
+  width: 1em;
+  height: 1em;
+  transform: translate(-50%, -50%) skewX(0deg);
+}
+</style>
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+
+
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+<style><br><br>      .twitterLink {<br>          position: fixed;<br>          font-size: 16px;<br>          bottom: 0;<br>          right: 0;<br>          width: 2.5em;<br>          height: 2.5em;<br>          border-radius: 100% 0 0 0 / 100% 0 0 0;<br>          background-color: #777;<br>          box-shadow: 0 0 5px #0007;<br>          transform-origin: bottom right;<br>          transition: all 0.25s;<br>          cursor: pointer;<br>          z-index: 9999;<br>      }<br><br>      .twitterLink:hover {<br>          background-color: #00a2f5;<br>          box-shadow: 0 0 10px #000;<br>          transform: scale(1.25);<br>      }<br><br>      .twitterIcon {<br>          position: absolute;<br>          bottom: 0.2em;<br>          right: 0.2em;<br>          width: 1.5em;<br>          height: 1.5em;<br>          filter: drop-shadow(0 0 2px #0007);<br>      }<br>  </style><style><br><br>      .twitterLink {<br>          position: fixed;<br>          font-size: 16px;<br>          bottom: 0;<br>          right: 0;<br>          width: 2.5em;<br>          height: 2.5em;<br>          border-radius: 100% 0 0 0 / 100% 0 0 0;<br>          background-color: #777;<br>          box-shadow: 0 0 5px #0007;<br>          transform-origin: bottom right;<br>          transition: all 0.25s;<br>          cursor: pointer;<br>          z-index: 9999;<br>      }<br><br>      .twitterLink:hover {<br>          background-color: #00a2f5;<br>          box-shadow: 0 0 10px #000;<br>          transform: scale(1.25);<br>      }<br><br>      .twitterIcon {<br>          position: absolute;<br>          bottom: 0.2em;<br>          right: 0.2em;<br>          width: 1.5em;<br>          height: 1.5em;<br>          filter: drop-shadow(0 0 2px #0007);<br>      }<br>  </style></head>
+
+<body translate="no">
+<div class="code">
+<div>
+  <div class="slash1">
+    <div class="front"></div>
+    <div class="back"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="top"></div>
+    <div class="bottom"></div>
+  </div>
+  <div class="slash2">
+    <div class="front"></div>
+    <div class="back"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="top"></div>
+    <div class="bottom"></div>
+  </div>
+  <div class="slash3">
+    <div class="front" style="width: 4em;"></div>
+    <div class="back" style="width: 4em;"></div>
+    <div class="left"></div>
+    <div class="right" style="transform: rotateY(90deg) translateZ(3.5em);"></div>
+    <div class="top" style="width: 4em;"></div>
+    <div class="bottom" style="width: 4em;"></div>
+  </div>
+  <div class="slash4">
+    <div class="front"></div>
+    <div class="back"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="top"></div>
+    <div class="bottom"></div>
+  </div>
+  <div class="slash5">
+    <div class="front"></div>
+    <div class="back"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="top"></div>
+    <div class="bottom"></div>
+  </div>
+  <div class="slash6">
+    <div class="front" style="width: 2em;"></div>
+    <div class="back" style="width: 2em;"></div>
+    <div class="left"></div>
+    <div class="right" style="transform: rotateY(90deg) translateZ(1.5em);"></div>
+    <div class="top" style="width: 2em;"></div>
+    <div class="bottom" style="width: 2em;"></div>
+  </div>
+  <div class="slash7">
+    <div class="front"></div>
+    <div class="back"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="top"></div>
+    <div class="bottom"></div>
+  </div>
+  <div class="slash8">
+    <div class="front"></div>
+    <div class="back"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="top"></div>
+    <div class="bottom"></div>
+  </div>
+</div>
+</div>
+
+  <script src="https://assets.codepen.io/1948355/twitterButton-2.1.0.js"></script><a class="twitterLink"><img class="twitterIcon" src="https://assets.codepen.io/1948355/twitterLogo4.png"></a><a class="twitterLink" href="https://www.facebook.com/profile.php?id=100041602303343" target="_blank"><img class="twitterIcon" src="https://www.us7p.com/wp-content/uploads/2021/10/280px-Facebook_f_logo_2019.svg.png" style="border-radius:50%;"></a>
+
+
+
+
+
+
+
+
+</body></html>
