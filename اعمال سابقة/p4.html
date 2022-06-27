@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .text{
+        background:#f00;
+        color:#fff;
+        text-align:center;
+      }
+      *{margin: 0%;}
+      #player{
+        width: 360px;
+        /* background-color: rgb(233, 72, 72); */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      #header{
+        text-align: center;
+        color: white;
+        height: 300px;
+      }
+      #header img{
+        margin-top: 20px;
+        height: 140px;
+      }
+      #header h2{
+        margin: 20px 0px;
+        font-size: 30px
+      }
+      #=header p{
+        font-size: 22px;
+      }
+      #content86{
+        background-color: aliceblue;
+      }
+      #buttons{
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+      }
+      #buttons img{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin: 0px 15px;
+      }
+      #volume89{
+        text-align: center;
+      }
+      #volume89 input{
+        width: 100%;
+      }
+      #volume89 input[type="range" i],#content86 input[type="range" i]{
+        -webkit-appearance:none;
+        background: #e6e7e8;
+        height: 4px;
+        margin: 0%;
+      }
+      #volume89 input[type="range"]::-webkit-slider-thumb{
+        -webkit-appearance:none;
+        background: rgb(233, 72, 72);
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+      }
+      #volume89 p{margin: 15px 0px 12px 0px;}
+      #color90{
+        text-align: center;
+        margin-top: 20px;
+      }
+      #color90 button{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+      }
+      #screen90{
+        width: 100%;
+        height: 100px;
+      }
+      .cb{
+        animation: an1 4s infinite alternate-reverse;
+      }
+      @keyframes an1 {
+        0%{background-image: radial-gradient(rgb(255, 0, 0),rgb(255, 255, 0),rgb(0, 255, 0),rgb(0, 255, 255),rgb(0, 0, 255),rgb(255, 0, 255));}
+        10%{background-image: radial-gradient(rgb(255, 0, 255),rgb(255, 0, 0),rgb(255, 255, 0),rgb(0, 255, 0),rgb(0, 255, 255),rgb(0, 0, 255));}
+        20%{background-image: radial-gradient(rgb(0, 0, 255),rgb(255, 0, 255),rgb(255, 0, 0),rgb(255, 255, 0),rgb(0, 255, 0),rgb(0, 255, 255));}
+        30%{background-image: radial-gradient(rgb(0, 255, 255)rgb(0, 0, 255),rgb(255, 0, 255),rgb(255, 0, 0),rgb(255, 255, 0),rgb(0, 255, 0));}
+        40%{background-image: radial-gradient(rgb(0, 255, 0),rgb(0, 255, 255)rgb(0, 0, 255),rgb(255, 0, 255),rgb(255, 0, 0),rgb(255, 255, 0));}
+        50%{background-image: radial-gradient(rgb(255, 255, 0),rgb(0, 255, 0),rgb(0, 255, 255)rgb(0, 0, 255),rgb(255, 0, 255),rgb(255, 0, 0));}
+        60%{background-image: radial-gradient(rgb(0, 255, 0),rgb(0, 255, 255)rgb(0, 0, 255),rgb(255, 0, 255),rgb(255, 0, 0),rgb(255, 255, 0));}
+        70%{background-image: radial-gradient(rgb(0, 255, 255)rgb(0, 0, 255),rgb(255, 0, 255),rgb(255, 0, 0),rgb(255, 255, 0),rgb(0, 255, 0));}
+        80%{background-image: radial-gradient(rgb(0, 0, 255),rgb(255, 0, 255),rgb(255, 0, 0),rgb(255, 255, 0),rgb(0, 255, 0),rgb(0, 255, 255));}
+        90%{background-image: radial-gradient(rgb(255, 0, 255),rgb(255, 0, 0),rgb(255, 255, 0),rgb(0, 255, 0),rgb(0, 255, 255),rgb(0, 0, 255));}
+        100%{background-image: radial-gradient(rgb(255, 0, 0),rgb(255, 255, 0),rgb(0, 255, 0),rgb(0, 255, 255),rgb(0, 0, 255),rgb(255, 0, 255));}
+      }
+      #colo190_1{
+        background: radial-gradient(rgb(255, 0, 0),rgb(255, 255, 0),rgb(0, 255, 0),rgb(0, 255, 255),rgb(0, 0, 255),rgb(255, 0, 255));
+      }
+      #colo190_2{
+        background-color: red;
+      }
+      #colo190_3{
+        background-color: green;
+      }
+      #colo190_4{
+        background-color: blue;
+      }
+      #content86 input[type="range" i]::-webkit-slider-thumb{
+        -webkit-appearance:none;
+      }
+      #content86 input[type="range" i]{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="screen90">
+      <main id="player">
+        <header id="header">
+          <img src="https://svgsilh.com/svg/157355.svg" alt="">
+          <h2>LIVE RADIO</h2>
+          <p id="title_radio">Radio 1</p>
+        </header>
+        <div id="content86">
+          <article id="buttons">
+            <img src="png/back-1.png" alt="" id="back">
+            <img src="png/play-button.png" alt="" id="play_pause">
+            <img src="png/next-1.png" alt="" id="next">
+            <audio src="a.mp3" id="audio_file"></audio>
+          </article>
+          <article id="volume89">
+            <p>مستوى الصوت</p>
+            <input type="range" max="100" min="0" step="1" name="Volume" value="50" id="volume">
+            <p>سرعة الصوت</p>
+            <input type="range" max="200" min="0" step="1" name="speed" value="100" id="speed">
+          </article>
+          <article id="color90">
+            <button id="colo190_1"></button>
+            <button id="colo190_2"></button>
+            <button id="colo190_3"></button>
+            <button id="colo190_4"></button>
+          </article>
+          <input type="range">
+          <center>
+          <a href="http://www.quran-radio.com/live.asp?q=normal"> <img src="http://www.quran-radio.com/images/logo.gif" alt=""> </a>
+          </center>
+          <input type="range">
+        </div>
+      </main>
+    </div>
+    <script type="text/javascript" src="p4.js"></script>
+  </body>
+</html>
